@@ -1,0 +1,32 @@
+{
+  "name": "simple-annotation",
+  "version": "0.1.0",
+  "description": "An annotation module for nodejs.",
+  "main": "simple-annotation.js",
+  "scripts": {
+    "start": "node simple-annotation.js",
+    "test": "mocha  --reporter spec"
+  },
+  "engines": {
+    "node": ">=5.1.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Malk123/annotations2.git"
+  },
+  "keywords": [
+    "nodejs",
+    "annotations",
+    "es16",
+    "es15"
+  ],
+  "author": "Alexander Malk <alexander@malk.rocks> (http://guerilla-coding.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Malk123/annotations2/issues"
+  },
+  "homepage": "https://github.com/Malk123/annotations2#readme",
+  "devDependencies": {
+    "mocha": "^5.0.1"
+  }
+}
