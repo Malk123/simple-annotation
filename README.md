@@ -181,7 +181,7 @@ Annotation.registerAnnotationReturnType(
 );
 ```
 ## To Do
-### _v0.1.1_
+
 - Add findBy() function
 - Refactoring (DRY, KISS, more Comments)
 
@@ -190,4 +190,4 @@ Annotation.registerAnnotationReturnType(
 ### v0.1.0
 - Build Basic Module
 
-## License
+
