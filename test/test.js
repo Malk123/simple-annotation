@@ -50,7 +50,7 @@ var g = new Anno({
 });
 
 g.setPaths([
-    '/test/*/es6TestClass.js',
+    '/test/testfolder/es6TestClass.js',
     '/test/*/test.js',
     '/test/*/function*.js',
     '/test/*/var.js'

@@ -1,6 +1,6 @@
 {
   "name": "simple-annotation",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "An annotation module for nodejs.",
   "main": "simple-annotation.js",
   "scripts": {
@@ -17,6 +17,7 @@
   "keywords": [
     "nodejs",
     "annotations",
+    "annotation",
     "es16",
     "es15"
   ],
