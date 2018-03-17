@@ -48,7 +48,7 @@ Annotation.registerAnnotation(
 
 var obj = new Annotation();
 
-// Important !! Add onlly absolute paths relative paths will be ignored.
+// Important !! Add only absolute paths, relative paths will be ignored.
 obj.setPaths([
     __dirname+'/*/es6TestClass.js',
     __dirname+'/*/test.js',
