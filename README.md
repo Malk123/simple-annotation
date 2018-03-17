@@ -1,4 +1,6 @@
 [![Build Status](https://travis-ci.org/Malk123/simple-annotation.svg?branch=master)](https://travis-ci.org/Malk123/simple-annotation)
+[![npm version](https://badge.fury.io/js/simple-annotation.svg)](https://badge.fury.io/js/simple-annotation)
+![npm](https://img.shields.io/npm/l/express.svg)
 # Simple Annotation
 Simple Annotation is a module for nodejs.
 With this module you can easily add annotation to nodejs.
@@ -7,7 +9,8 @@ The module will search for comments in files and after this it search for your r
 
 
 
-
+## Installation
+npm i simple-annotation
 
 ## Example
 Example file with annotation.
@@ -42,15 +45,13 @@ Annotation.registerAnnotation(
     'ES6function' // Annotation Return Type   {ES6class, ES6function, var, function}
 );
 
-var obj = new Annotation({
-    removeDoubleFiles: true
-});
+var obj = new Annotation();
 
 obj.setPaths([
-    '/test/*/es6TestClass.js',
-    '/test/*/test.js',
-    '/test/*/function*.js',
-    '/test/*/var.js'
+    __dirname+'/*/es6TestClass.js',
+    __dirname+'/*/test.js',
+    __dirname+'/*/function*.js',
+    __dirname+'/*/var.js'
 ]);
 
 var all = obj.findAll();
@@ -185,9 +186,5 @@ Annotation.registerAnnotationReturnType(
 - Add findBy() function
 - Refactoring (DRY, KISS, more Comments)
 
-
-## Changelog
-### v0.1.1
-- Build Basic Module
 
 

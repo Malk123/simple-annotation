@@ -45,15 +45,13 @@ Anno.registerAnnotation(
 );
 
 
-var g = new Anno({
-    removeDoubleFiles: true
-});
+var g = new Anno();
 
 g.setPaths([
-    '/test/testfolder/es6TestClass.js',
-    '/test/*/test.js',
-    '/test/*/function*.js',
-    '/test/*/var.js'
+    __dirname+'/testfolder/es6TestClass.js',
+    __dirname+'/*/test.js',
+    __dirname+'/*/function*.js',
+    __dirname+'/*/var.js'
 ]);
 
 
