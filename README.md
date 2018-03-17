@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/Malk123/simple-annotation.svg?branch=master)](https://travis-ci.org/Malk123/simple-annotation)
+[![Coverage Status](https://coveralls.io/repos/github/Malk123/simple-annotation/badge.svg?branch=master)](https://coveralls.io/github/Malk123/simple-annotation?branch=master)
 [![npm version](https://badge.fury.io/js/simple-annotation.svg)](https://badge.fury.io/js/simple-annotation)
 ![npm](https://img.shields.io/npm/l/express.svg)
 # Simple Annotation
@@ -47,6 +48,7 @@ Annotation.registerAnnotation(
 
 var obj = new Annotation();
 
+// Important !! Add onlly absolute paths relative paths will be ignored.
 obj.setPaths([
     __dirname+'/*/es6TestClass.js',
     __dirname+'/*/test.js',
