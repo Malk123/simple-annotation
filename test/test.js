@@ -4,13 +4,13 @@ var Anno = require('../simple-annotation');
 
 Anno.registerAnnotation(
     'AnnotationES6Function', // Annotation Name
-    'string', // Annotation Value Type   {string, int, array, object}
+    'string', // Annotation Value Type   {string, int, array, object, empty}
     'ES6function' // Annotation Return Type   {class, function, var, module}
 );
 
 Anno.registerAnnotation(
     'AnnotationClassString', // Annotation Name
-    'string', // Annotation Value Type   {string, int, array, object}
+    'string', // Annotation Value Type   {string, int, array, object, empty}
     'ES6class' // Annotation Return Type   {class, function, var, module}
 );
 
@@ -22,26 +22,38 @@ Anno.registerAnnotation(
 
 Anno.registerAnnotation(
     'AnnotationClassArray', // Annotation Name
-    'array', // Annotation Value Type   {string, int, array, object}
+    'array', // Annotation Value Type   {string, int, array, object, empty}
     'ES6class' // Annotation Return Type   {class, function, var, module}
 );
 
 Anno.registerAnnotation(
     'AnnotationClassInt', // Annotation Name
-    'int', // Annotation Value Type   {string, int, array, object}
+    'int', // Annotation Value Type   {string, int, array, object, empty}
     'ES6class' // Annotation Return Type   {class, function, var, module}
 );
 
 Anno.registerAnnotation(
     'AnnotationFunction', // Annotation Name
-    'string', // Annotation Value Type   {string, int, array, object}
+    'string', // Annotation Value Type   {string, int, array, object, empty}
     'function' // Annotation Return Type   {class, function, var, module}
 );
 
 Anno.registerAnnotation(
     'AnnotationVariable', // Annotation Name
-    'string', // Annotation Value Type   {string, int, array, object}
+    'string', // Annotation Value Type   {string, int, array, object, empty}
     'var' // Annotation Return Type   {class, function, var, module}
+);
+
+Anno.registerAnnotation(
+    'EmptyAnnotation', // Annotation Name
+    'empty', // Annotation Value Type   {string, int, array, object, empty}
+    'ES6class' // Annotation Return Type   {class, function, var, module}
+);
+
+Anno.registerAnnotation(
+    'ReturnNullAnnotationES6Function', // Annotation Name
+    'empty', // Annotation Value Type   {string, int, array, object, empty}
+    'ES6function' // Annotation Return Type   {class, function, var, module}
 );
 
 
@@ -77,6 +89,12 @@ describe('Annotation Value Check', function() {
         assert.equal(typeof m[0].value, 'number');
     });
 
+    it('Empty', function(){
+        var m = g.find('EmptyAnnotation');
+        assert.equal(typeof m[0].value, 'string');
+        assert.equal(m[0].value, '');
+    });
+
 });
 
 
@@ -88,7 +106,7 @@ describe('Counter check', function() {
         assert.equal(Object.keys(m['AnnotationFunction']).length, 5);
     });
     it('Counter check', function(){
-        assert.equal(Object.keys(m).length, 7);
+        assert.equal(Object.keys(m).length, 8);
     });
 });
 

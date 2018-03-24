@@ -42,7 +42,7 @@ var Annotation = require('simple-annotation');
 
 Annotation.registerAnnotation(
     'AnnotationES6Function', // Annotation Name
-    'string', // Annotation Value Type   {string, int, array, object}
+    'string', // Annotation Value Type   {string, int, array, object, empty}
     'ES6function' // Annotation Return Type   {ES6class, ES6function, var, function}
 );
 
@@ -69,7 +69,7 @@ for(var i in all){
 ```javascript
 Annotation.registerAnnotation(
     'AnnotationES6Function', // Annotation Name
-    'string', // Annotation Value Type   {string, int, array, object}
+    'string', // Annotation Value Type   {string, int, array, object, empty}
     'ES6function' // Annotation Return Type   {ES6class, ES6function, var, function}
 );
 ```
@@ -108,6 +108,7 @@ module.exports = function ReturnType(str){
 | array   | array   |
 | object   | object   |
 | int   | integer   |
+| empty | empty string|
 
 ### Preconfigured return types pattern
 
