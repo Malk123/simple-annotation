@@ -1,5 +1,6 @@
 var assert = require('assert');
 var Anno = require('../simple-annotation');
+var expect = require('chai').expect;
 
 
 Anno.registerAnnotation(
@@ -157,3 +158,16 @@ for(var i in m){
         });
     }
 }
+
+var g2 = new Anno();
+
+describe('Throw test', function() {
+    it('Path Check', function(){
+        expect(function(){
+            g2.find('AnnotationClassString');
+        }).to.throw('Set one or more paths.');
+    });
+});
+
+
+
